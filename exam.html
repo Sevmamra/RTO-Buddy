@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Exam Mode - RTO Buddy" />
+  <title>Exam | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>🧠 RTO Exam Simulator</h1>
+    <div id="exam-timer">⏱️ 45s</div>
+  </header>
+
+  <main class="container">
+    <section id="exam-container">
+      <!-- Exam question will load here -->
+      <p>Loading exam...</p>
+    </section>
+
+    <div id="exam-controls">
+      <button onclick="nextExamQuestion()">Next</button>
+    </div>
+
+    <div id="exam-result" style="display: none;">
+      <h2>🎉 Exam Complete</h2>
+      <p id="score-summary">You scored X out of 15</p>
+      <button onclick="location.reload()">Retake Exam</button>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/exam.js"></script>
+</body>
+</html>
