@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": "no-entry.png",
+    "meaning": "No Entry"
+  },
+  {
+    "id": 2,
+    "image": "speed-limit-50.png",
+    "meaning": "Speed Limit 50 km/h"
+  },
+  {
+    "id": 3,
+    "image": "school-ahead.png",
+    "meaning": "School Ahead"
+  },
+  {
+    "id": 4,
+    "image": "horn-prohibited.png",
+    "meaning": "Horn Prohibited"
+  },
+  {
+    "id": 5,
+    "image": "u-turn-prohibited.png",
+    "meaning": "U-Turn Prohibited"
+  },
+  {
+    "id": 6,
+    "image": "left-turn.png",
+    "meaning": "Turn Left"
+  },
+  {
+    "id": 7,
+    "image": "roundabout.png",
+    "meaning": "Roundabout"
+  }
+]
