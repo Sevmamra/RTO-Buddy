@@ -1,0 +1,52 @@
+[
+  {
+    "type": "Learner’s License",
+    "description": "A temporary license issued to learn driving under supervision. Valid for 6 months.",
+    "requirements": [
+      "Minimum age: 18 years",
+      "Proof of age and address",
+      "Medical certificate (Form 1A)",
+      "Pass basic written exam"
+    ]
+  },
+  {
+    "type": "Permanent License",
+    "description": "Issued after 30 days of having a learner’s license. Valid for up to 20 years.",
+    "requirements": [
+      "Valid learner’s license",
+      "Driving test clearance",
+      "Application Form 4",
+      "Passport size photos"
+    ]
+  },
+  {
+    "type": "License Renewal",
+    "description": "Can be renewed within 1 year before or after expiry. Validity depends on age and type.",
+    "requirements": [
+      "Old driving license",
+      "Medical certificate (if age > 40)",
+      "Application Form 9",
+      "Fees as per RTO"
+    ]
+  },
+  {
+    "type": "Duplicate License",
+    "description": "Issued when original license is lost, stolen, or damaged.",
+    "requirements": [
+      "FIR copy (in case of loss)",
+      "Original documents (if damaged)",
+      "Form LLD",
+      "Fee payment receipt"
+    ]
+  },
+  {
+    "type": "International Driving Permit",
+    "description": "Enables Indian citizens to drive abroad legally. Valid for 1 year.",
+    "requirements": [
+      "Valid Indian driving license",
+      "Visa and passport",
+      "Medical certificate",
+      "Application Form 4A"
+    ]
+  }
+]
