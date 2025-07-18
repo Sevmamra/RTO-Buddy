@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Proof of Age",
+    "examples": ["Birth Certificate", "PAN Card", "School Certificate"],
+    "icon": "icons/age-proof.svg"
+  },
+  {
+    "title": "Proof of Address",
+    "examples": ["Aadhaar Card", "Electricity Bill", "Passport"],
+    "icon": "icons/address-proof.svg"
+  },
+  {
+    "title": "Identity Proof",
+    "examples": ["Voter ID", "Passport", "Driving License"],
+    "icon": "icons/id-proof.svg"
+  },
+  {
+    "title": "Passport Size Photos",
+    "examples": ["Recent photographs (2 copies)"],
+    "icon": "icons/photo.svg"
+  },
+  {
+    "title": "Application Form",
+    "examples": ["Form 1, Form 2, Form 4 (as applicable)"],
+    "icon": "icons/form.svg"
+  }
+]
