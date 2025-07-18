@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Driving Licence Types and Info - RTO Buddy" />
+  <title>DL Information | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>📘 Driving Licence Information</h1>
+  </header>
+
+  <main class="container">
+    <section id="dl-info" class="info-section">
+      <p>Loading licence information...</p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    fetch('data/dl-info.json')
+      .then(res => res.json())
+      .then(data => {
+        const dlInfo = document.getElementById('dl-info');
+        dlInfo.innerHTML = data.map(dl => `
+          <div class="dl-card">
+            <h2>${dl.title}</h2>
+            <p>${dl.description}</p>
+          </div>
+        `).join('');
+      })
+      .catch(err => {
+        document.getElementById('dl-info').innerHTML =
+          '<p>Error loading data.</p>';
+        console.error(err);
+      });
+  </script>
+
+  <style>
+    .info-section {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .dl-card {
+      background: #f8f8f8;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .dl-card h2 {
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+    .dl-card p {
+      line-height: 1.6;
+      color: #333;
+    }
+  </style>
+
+</body>
+</html>
