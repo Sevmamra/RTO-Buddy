@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="RTO Codes by State - RTO Buddy" />
+  <title>RTO Codes | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>🏢 RTO Codes</h1>
+  </header>
+
+  <main class="container">
+    <section id="rto-list">
+      <p>Loading RTO codes for your selected state...</p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Dummy function — actual logic to be implemented in onboarding.js or utils.js
+    const userState = localStorage.getItem('userState') || 'Gujarat';
+
+    fetch('data/rto.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('rto-list');
+        const stateRTOs = data[userState];
+
+        if (!stateRTOs) {
+          container.innerHTML = `<p>No data available for ${userState}.</p>`;
+          return;
+        }
+
+        const listHTML = stateRTOs.map(rto => `
+          <div class="card">
+            <h3>${rto.code}</h3>
+            <p>${rto.city}</p>
+          </div>
+        `).join('');
+        container.innerHTML = listHTML;
+      })
+      .catch(err => {
+        document.getElementById('rto-list').innerHTML = '<p>Error loading RTO data.</p>';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
