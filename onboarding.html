@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Select your state and language - RTO Buddy"/>
+  <title>Welcome - RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body class="onboarding-page">
+
+  <div class="onboarding-container">
+    <div class="welcome-box">
+      <img src="assets/images/logos/logo.png" alt="RTO Buddy Logo" class="welcome-logo" />
+      <h1>Welcome to RTO Buddy</h1>
+      <p>Select your state and preferred language to continue.</p>
+
+      <form id="onboarding-form">
+        <div class="form-group">
+          <label for="state">Select State</label>
+          <select id="state" required>
+            <option value="">-- Choose State --</option>
+            <option value="GJ">Gujarat</option>
+            <option value="MH">Maharashtra</option>
+            <option value="RJ">Rajasthan</option>
+            <option value="DL">Delhi</option>
+            <option value="UP">Uttar Pradesh</option>
+            <!-- Add more states as needed -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="language">Preferred Language</label>
+          <select id="language" required>
+            <option value="">-- Choose Language --</option>
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="gu">ગુજરાતી</option>
+            <!-- Future: Add more languages -->
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary">Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/onboarding.js"></script>
+</body>
+</html>
