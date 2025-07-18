@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "question": "What does a red traffic light mean?",
+    "options": ["Stop", "Go", "Slow down"],
+    "answer": "Stop"
+  },
+  {
+    "id": 2,
+    "question": "What is the maximum speed limit in cities?",
+    "options": ["30 km/h", "50 km/h", "60 km/h"],
+    "answer": "50 km/h"
+  },
+  {
+    "id": 3,
+    "question": "What should you do before overtaking another vehicle?",
+    "options": [
+      "Honk continuously",
+      "Check mirrors and use indicator",
+      "Speed up without looking"
+    ],
+    "answer": "Check mirrors and use indicator"
+  },
+  {
+    "id": 4,
+    "question": "What does a triangular road sign indicate?",
+    "options": ["Warning", "Mandatory", "Informative"],
+    "answer": "Warning"
+  },
+  {
+    "id": 5,
+    "question": "Which vehicle has the right of way at a roundabout?",
+    "options": [
+      "Vehicle entering the circle",
+      "Vehicle already inside the circle",
+      "The largest vehicle"
+    ],
+    "answer": "Vehicle already inside the circle"
+  }
+]
