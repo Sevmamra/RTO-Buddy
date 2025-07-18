@@ -1,0 +1,33 @@
+{
+  "Ahmedabad": [
+    {
+      "name": "Safe Drive Driving School",
+      "address": "SG Highway, Ahmedabad - 380060",
+      "phone": "+91-9876543210"
+    },
+    {
+      "name": "Gujarat Motor Training School",
+      "address": "Maninagar, Ahmedabad - 380008",
+      "phone": "+91-8123456789"
+    }
+  ],
+  "Mumbai": [
+    {
+      "name": "City Drive School",
+      "address": "Andheri East, Mumbai - 400069",
+      "phone": "+91-9988776655"
+    },
+    {
+      "name": "Perfect Driving School",
+      "address": "Borivali West, Mumbai - 400092",
+      "phone": "+91-8877665544"
+    }
+  ],
+  "Jaipur": [
+    {
+      "name": "Rajasthan Driving Academy",
+      "address": "Vaishali Nagar, Jaipur - 302021",
+      "phone": "+91-7788990011"
+    }
+  ]
+}
