@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Question Bank - RTO Buddy" />
+  <title>Question Bank | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>📘 Question Bank</h1>
+  </header>
+
+  <main class="container">
+    <section id="question-list">
+      <!-- Questions will be loaded here by quiz.js -->
+      <p>Loading questions...</p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/quiz.js"></script>
+  <script>
+    // Load questions in read-only mode
+    loadQuestions({ mode: "readonly" });
+  </script>
+
+</body>
+</html>
