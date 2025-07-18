@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Driving Schools by City - RTO Buddy" />
+  <title>Driving Schools | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>🏫 Driving Schools in Your City</h1>
+  </header>
+
+  <main class="container">
+
+    <div class="form-group">
+      <label for="city-select">Select Your City:</label>
+      <select id="city-select">
+        <option disabled selected>Choose city</option>
+      </select>
+    </div>
+
+    <section id="school-list" class="info-section">
+      <p>Select a city to view available driving schools.</p>
+    </section>
+
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    fetch('data/schools.json')
+      .then(res => res.json())
+      .then(data => {
+        const citySelect = document.getElementById('city-select');
+        const schoolList = document.getElementById('school-list');
+
+        const cities = Object.keys(data);
+        cities.forEach(city => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          citySelect.appendChild(option);
+        });
+
+        citySelect.addEventListener('change', () => {
+          const selectedCity = citySelect.value;
+          const schools = data[selectedCity];
+
+          if (schools && schools.length > 0) {
+            schoolList.innerHTML = schools.map(school => `
+              <div class="dl-card">
+                <h2>${school.name}</h2>
+                <p><strong>Address:</strong> ${school.address}</p>
+                <p><strong>Phone:</strong> ${school.phone}</p>
+              </div>
+            `).join('');
+          } else {
+            schoolList.innerHTML = '<p>No schools found for selected city.</p>';
+          }
+        });
+      })
+      .catch(err => {
+        document.getElementById('school-list').innerHTML =
+          '<p>Error loading school data.</p>';
+        console.error(err);
+      });
+  </script>
+
+  <style>
+    .form-group {
+      margin-top: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .info-section {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .dl-card {
+      background: #f4faff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .dl-card h2 {
+      color: #004488;
+      margin-bottom: 8px;
+    }
+
+    .dl-card p {
+      line-height: 1.5;
+      color: #333;
+    }
+  </style>
+
+</body>
+</html>
