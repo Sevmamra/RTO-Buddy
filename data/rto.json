@@ -1,0 +1,19 @@
+{
+  "Gujarat": [
+    { "code": "GJ-01", "city": "Ahmedabad" },
+    { "code": "GJ-02", "city": "Mehsana" },
+    { "code": "GJ-03", "city": "Rajkot" },
+    { "code": "GJ-04", "city": "Bhavnagar" }
+  ],
+  "Maharashtra": [
+    { "code": "MH-01", "city": "Mumbai (South)" },
+    { "code": "MH-02", "city": "Mumbai (West)" },
+    { "code": "MH-12", "city": "Pune" },
+    { "code": "MH-14", "city": "Pimpri-Chinchwad" }
+  ],
+  "Rajasthan": [
+    { "code": "RJ-14", "city": "Jaipur" },
+    { "code": "RJ-19", "city": "Ajmer" },
+    { "code": "RJ-27", "city": "Udaipur" }
+  ]
+}
