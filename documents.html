@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Documents Required for Driving Licence - RTO Buddy" />
+  <title>Required Documents | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>🗂️ Required Documents</h1>
+  </header>
+
+  <main class="container">
+    <section id="doc-list" class="document-list">
+      <p>Loading documents...</p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    fetch('data/documents.json')
+      .then(res => res.json())
+      .then(data => {
+        const docList = document.getElementById('doc-list');
+        docList.innerHTML = data.map(doc => `
+          <div class="doc-item">
+            <img src="assets/images/icons/${doc.icon}" alt="${doc.name}" />
+            <span>${doc.name}</span>
+          </div>
+        `).join('');
+      })
+      .catch(err => {
+        document.getElementById('doc-list').innerHTML =
+          '<p>Error loading document data.</p>';
+        console.error(err);
+      });
+  </script>
+
+  <style>
+    .document-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .doc-item {
+      display: flex;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .doc-item:hover {
+      background: #eef7ff;
+    }
+    .doc-item img {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+    }
+    .doc-item span {
+      font-weight: 500;
+    }
+  </style>
+
+</body>
+</html>
