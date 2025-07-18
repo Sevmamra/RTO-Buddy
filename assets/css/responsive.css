@@ -1,0 +1,84 @@
+/* ========== Small Devices (Max width: 768px) ========== */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .main-header {
+    font-size: 20px;
+    padding: 18px 15px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .quiz-container {
+    padding: 15px;
+  }
+
+  .option {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .flashcard {
+    padding: 15px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input, select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+
+/* ========== Very Small Devices (Max width: 480px) ========== */
+@media (max-width: 480px) {
+  .main-header {
+    font-size: 18px;
+    padding: 15px 10px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .quiz-container {
+    padding: 12px;
+  }
+
+  .option {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  input, select {
+    font-size: 13px;
+  }
+
+  .alert {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
