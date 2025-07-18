@@ -1,0 +1,147 @@
+/* ========== Base Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f8fc;
+  color: #222;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ========== Global Layout ========== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Header ========== */
+.main-header {
+  background-color: #007bff;
+  color: white;
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ========== Cards ========== */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* ========== Quiz Elements ========== */
+.quiz-container {
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.option {
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  transition: all 0.2s ease;
+}
+
+.option:hover {
+  border-color: #007bff;
+  background-color: #e6f0ff;
+}
+
+.option.correct {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.option.wrong {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+/* ========== Flashcards ========== */
+.flashcard {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+/* ========== Navigation Buttons ========== */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* ========== Footer (Optional) ========== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e9f2fc;
+  color: #333;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ========== Forms ========== */
+input, select {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* ========== Alerts & Notifications ========== */
+.alert {
+  padding: 15px;
+  background-color: #ffefc1;
+  border-left: 6px solid #ffc107;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  color: #555;
+}
