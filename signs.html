@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Traffic Signs Gallery - RTO Buddy" />
+  <title>Traffic Signs | RTO Buddy</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="icon" href="assets/images/logos/favicon.png" />
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>🚦 Traffic Signs</h1>
+  </header>
+
+  <main class="container">
+    <section id="signs-gallery">
+      <p>Loading traffic signs...</p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    fetch('data/signs.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('signs-gallery');
+        container.innerHTML = data.map(sign => `
+          <div class="sign-card">
+            <img src="assets/images/signs/${sign.image}" alt="${sign.name}" />
+            <p>${sign.name}</p>
+          </div>
+        `).join('');
+      })
+      .catch(err => {
+        document.getElementById('signs-gallery').innerHTML = '<p>Error loading signs data.</p>';
+        console.error(err);
+      });
+  </script>
+
+  <style>
+    #signs-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+    .sign-card {
+      width: 120px;
+      text-align: center;
+    }
+    .sign-card img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .sign-card p {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  </style>
+
+</body>
+</html>
